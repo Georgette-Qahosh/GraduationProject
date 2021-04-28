@@ -6,4 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".customervendorpage">
 
+    <ImageView
+        android:id="@+id/image7"
+        android:layout_width="78dp"
+        android:layout_height="81dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="18dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/NameCus"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Costumer Name"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/NameVen"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Venue Name"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar8"
+        android:layout_width="194dp"
+        android:layout_height="47dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="94dp"
+        android:layout_height="75dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="309dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/NameVend"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Costumer Name"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/details"
+        android:layout_width="96dp"
+        android:layout_height="51dp"
+        android:text="Details"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <Button
+        android:id="@+id/Messages"
+        android:layout_width="111dp"
+        android:layout_height="49dp"
+        android:text="Messages"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/Reviews"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Reviews"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="474dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="530dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="612dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/NameVendor1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="name"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="530dp" />
+
+    <TextView
+        android:id="@+id/NameVendor2"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="name"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBa9"
+        android:layout_width="194dp"
+        android:layout_height="47dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="530dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBa10"
+        android:layout_width="194dp"
+        android:layout_height="47dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="610dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

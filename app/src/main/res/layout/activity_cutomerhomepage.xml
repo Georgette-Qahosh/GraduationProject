@@ -6,4 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".cutomerhomepage">
 
+
+    <ImageView
+        android:id="@+id/imageCostumer"
+        android:layout_width="83dp"
+        android:layout_height="69dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="36dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/costumerName"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:textSize="16dp"
+        android:text="Costumer Name "
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="115dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search location"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <TextView
+        android:id="@+id/Discover"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Discover"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="146dp"
+        android:layout_height="138dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="281dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="151dp"
+        android:layout_height="132dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="287dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/feature"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="featured Vendors"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="452dp" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="84dp"
+        android:layout_height="85dp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="509dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="522dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="84dp"
+        android:layout_height="85dp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="605dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="621dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

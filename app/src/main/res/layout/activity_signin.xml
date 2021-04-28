@@ -4,13 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signin">
+    tools:context=".signin"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/SignIn"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="190dp"
+        android:text="Sign In"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Email"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginEnd="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Password"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginEnd="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="349dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/SignINB"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sign In"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <RadioButton
+        android:id="@+id/newAccount"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:text="New? Creat a new Account"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="538dp" />
+
+    <TextView
+        android:id="@+id/viewmore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="195dp" />
+        android:text="discover the Application"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="621dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

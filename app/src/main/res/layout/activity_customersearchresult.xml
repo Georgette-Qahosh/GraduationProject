@@ -6,4 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".customersearchresult">
 
+    <TextView
+        android:id="@+id/rearchResult"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="search results"
+        android:textSize="35dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <ImageView
+        android:id="@+id/vendor1"
+        android:layout_width="113dp"
+        android:layout_height="123dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="139dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/vendor2"
+        android:layout_width="113dp"
+        android:layout_height="126dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="284dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/vendor3"
+        android:layout_width="107dp"
+        android:layout_height="132dp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="428dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/vendor4"
+        android:layout_width="112dp"
+        android:layout_height="124dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="582dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="205dp"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="354dp"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="504dp"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/ratingBar6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="648dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/VendorName1"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Vendor 1"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="158dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/VendorName2"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Vendor 2"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <TextView
+        android:id="@+id/VendorName3"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Vendor 3"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="451dp" />
+
+    <TextView
+        android:id="@+id/VendorName4"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Vendor 4"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="599dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
