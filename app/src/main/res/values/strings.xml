@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">GraduationProject</string>
+    <string name="my_venues">My Venues</string>
+    <string name="full_name">Full Name</string>
+    <string name="the_vendor_profile_picture">The vendor profile picture</string>
+    <string name="the_venue_name">The Venue Name</string>
+    <string name="book_now">Book Now</string>
+    <string name="see_details">See Details</string>
+    <string name="the_venue_picture">The Venue Picture</string>
+    <string name="venue_name">Venue Name</string>
+    <string name="todo">TODO</string>
+    <string name="view_the_venue">View the venue</string>
+    <string name="edit_the_venue">Edit the venue</string>
+    <string name="enter_the_booking_details_below">Enter the booking details below</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="enter_the_payment_details_below">Enter the payment details below</string>
+    <string name="card_expire_date">Card Expire Date</string>
+    <string name="card_number">Card Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="cvc">CVC</string>
 </resources>
