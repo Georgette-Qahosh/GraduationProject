@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "99378032037",
+    "project_id": "wedding-app-d822c",
+    "storage_bucket": "wedding-app-d822c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99378032037:android:e8e16c6341854c7b0d8c4c",
+        "android_client_info": {
+          "package_name": "com.example.graduationproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99378032037-uucma7bv3nv4lru0990s0o9nk5a8cvl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEu2Bd8EIGe_mii0sRrwLU5IgqSV71hqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99378032037-uucma7bv3nv4lru0990s0o9nk5a8cvl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
