@@ -19,4 +19,13 @@
     <string name="name_on_card">Name on Card</string>
     <string name="cvc">CVC</string>
     <string name="cancel">Cancel</string>
+    <string name="favorite">Favorite</string>
+    <string name="content_description_favorite">Content Description Favorite</string>
+    <string name="search">Search</string>
+    <string name="content_description_search">Content Description Search</string>
+    <string name="more">More</string>
+    <string name="content_description_more">Content Description More</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
 </resources>

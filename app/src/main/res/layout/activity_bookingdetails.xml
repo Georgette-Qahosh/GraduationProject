@@ -6,12 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".bookingdetails">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/backAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/back_top_bar"
+            app:navigationIcon="@drawable/ic_back_24dp"
+            app:title="Booking Details"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <TextView
         android:id="@+id/enterBookingDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="189dp"
         android:fontFamily="@font/cairo_bold"
         android:text="@string/enter_the_booking_details_below"
@@ -37,7 +55,8 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterBookingDetails">
+        app:layout_constraintTop_toBottomOf="@+id/enterBookingDetails"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -75,7 +94,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterPaymentDetails">
+        app:layout_constraintTop_toBottomOf="@+id/enterPaymentDetails"
+        app:startIconDrawable="@drawable/ic_baseline_face_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -98,7 +118,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameOnCard">
+        app:layout_constraintTop_toBottomOf="@+id/nameOnCard"
+        app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -120,7 +141,8 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardNumber">
+        app:layout_constraintTop_toBottomOf="@+id/cardNumber"
+        app:startIconDrawable="@drawable/ic_baseline_timelapse_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -143,7 +165,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardExpireDate">
+        app:layout_constraintTop_toBottomOf="@+id/cardExpireDate"
+        app:startIconDrawable="@drawable/ic_baseline_credit_card_24">>
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
