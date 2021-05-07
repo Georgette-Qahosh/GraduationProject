@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="saveUser"
     android:orientation="vertical"
     tools:context=".signup"
     tools:visibility="visible">
@@ -20,9 +21,9 @@
 
     <TextView
         android:id="@+id/fullname"
-        android:layout_gravity="left"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginTop="40dp"
         android:text="Full Name"
         android:textSize="22dp"
@@ -39,9 +40,9 @@
 
     <TextView
         android:id="@+id/SEmail"
-        android:layout_gravity="left"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginTop="20dp"
         android:text="Email"
         android:textSize="22dp"
@@ -59,9 +60,9 @@
 
     <TextView
         android:id="@+id/Spassword"
-        android:layout_gravity="left"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginTop="20dp"
         android:text="Password"
         android:textSize="22dp"
@@ -79,11 +80,11 @@
 
     <TextView
         android:id="@+id/chose"
-        android:layout_gravity="left"
-        android:gravity="center"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="choose the Subscription Type"
         android:textSize="27dp" />
 
@@ -94,32 +95,28 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/Vendor"
+        <RadioButton
+            android:id="@+id/vendorChoice"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Vendor"
-            android:textSize="25dp"
+            android:text="Vendor" />
 
-            />
-
-        <CheckBox
-            android:id="@+id/costumer"
+        <RadioButton
+            android:id="@+id/costumerChoice"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="customer"
-            android:textSize="25dp"
-            android:layout_gravity="center"
-            />
+            android:text="Customer" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/SignUpB"
         android:layout_width="100dp"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="saveUser"
         android:text="Sign up" />
 
 

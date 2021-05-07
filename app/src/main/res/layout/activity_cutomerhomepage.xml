@@ -7,25 +7,47 @@
     tools:context=".cutomerhomepage">
 
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/ic_menu_24dp"
+            app:title="Home" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <ImageView
         android:id="@+id/imageCostumer"
         android:layout_width="83dp"
         android:layout_height="69dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="36dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/costumerName"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:textSize="16dp"
+        android:layout_width="147dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/cairo_bold"
         android:text="Costumer Name "
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="115dp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageCostumer"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -36,25 +58,27 @@
         android:inputType="textPersonName"
         android:text="Search location"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="131dp" />
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="188dp" />
 
     <TextView
         android:id="@+id/Discover"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Discover"
         android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="224dp" />
 
     <ImageView
         android:id="@+id/image1"
         android:layout_width="146dp"
         android:layout_height="138dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="281dp"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -71,44 +95,47 @@
         android:id="@+id/feature"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="featured Vendors"
         android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="452dp" />
 
     <ImageView
         android:id="@+id/image3"
         android:layout_width="84dp"
         android:layout_height="85dp"
-        tools:layout_editor_absoluteX="7dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="509dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="522dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="522dp" />
 
     <ImageView
         android:id="@+id/image4"
         android:layout_width="84dp"
         android:layout_height="85dp"
-        tools:layout_editor_absoluteX="7dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="605dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <RatingBar
         android:id="@+id/ratingBar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="621dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="621dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
