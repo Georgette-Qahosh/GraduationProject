@@ -59,7 +59,6 @@ public class signup extends AppCompatActivity {
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
                 String fullName = inputFullName.getText().toString().trim();
-                String userType = RadioButtonClicked(v);
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
@@ -101,37 +100,15 @@ public class signup extends AppCompatActivity {
     }
 
 
-    public String RadioButtonClicked(View view) {
 
-        //This variable will store whether the user was male or female
-        String userType="";
-        // Check that the button is  now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.vendorChoice:
-                if (checked)
-                    userType = "Vendor";
-                break;
-            case R.id.costumerChoice:
-                if (checked)
-                    userType = "Customer";
-                break;
-        }
-
-        return userType;
-    }
     public void saveUser (View v) {
         String email = inputEmail.getText().toString().trim();
         String password = inputPassword.getText().toString().trim();
         String fullName = inputFullName.getText().toString().trim();
-        String userType = RadioButtonClicked(v);
         Map<String,Object> user = new HashMap<>();
         user.put(Key_FullName,fullName);
         user.put(Key_Email,email);
         user.put(Key_Password,password);
-        user.put(Key_Type,userType);
         db.collection("Users").document("First User").set(user)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

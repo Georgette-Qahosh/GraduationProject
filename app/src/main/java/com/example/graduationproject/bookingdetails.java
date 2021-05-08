@@ -41,13 +41,18 @@ public class bookingdetails extends AppCompatActivity {
         TextInputLayout NumberOfCard = (TextInputLayout) findViewById(R.id.cardNumber);
         TextInputLayout ExpireDate = (TextInputLayout) findViewById(R.id.cardExpireDate);
         TextInputLayout CVC = (TextInputLayout) findViewById(R.id.cardCVC);
+        String bookDate = BookingDate.getEditText().getText().toString().trim();
+        String cardName = NameCard.getEditText().getText().toString().trim();
+        String cardNum = NumberOfCard.getEditText().getText().toString().trim();
+        String expDate = ExpireDate.getEditText().getText().toString().trim();
+        String cvcNum = CVC.getEditText().getText().toString().trim();
 
         Map<String,Object> booking = new HashMap<>();
-        booking.put(BookingDate_Key,BookingDate);
-        booking.put(CardName_Key,NameCard);
-        booking.put(CardNumber_Key, NumberOfCard);
-        booking.put(ExpireDate_Key, ExpireDate);
-        booking.put(cvc_Key, CVC);
+        booking.put(BookingDate_Key,bookDate);
+        booking.put(CardName_Key,cardName);
+        booking.put(CardNumber_Key, cardNum);
+        booking.put(ExpireDate_Key, expDate);
+        booking.put(cvc_Key, cvcNum);
         mDocRef.set(booking).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
