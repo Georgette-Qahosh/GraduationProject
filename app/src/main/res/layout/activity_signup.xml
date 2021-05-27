@@ -1,126 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="saveUser"
     android:orientation="vertical"
     tools:context=".signup"
     tools:visibility="visible">
 
-    <TextView
-        android:id="@+id/SignUp"
-        android:layout_width="95dp"
-        android:layout_height="66dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="70dp"
-        android:gravity="center"
-        android:text="Sign Up"
-        android:textSize="22dp" />
 
     <TextView
-        android:id="@+id/fullname"
-        android:layout_gravity="left"
-        android:layout_width="400dp"
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Full Name"
-        android:textSize="22dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="264dp"
+        android:fontFamily="@font/cairo_bold"
+        android:text="@string/create_your_account"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        />
+    <com.google.android.material.textfield.TextInputLayout
 
-    <EditText
         android:id="@+id/editfullname"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="37dp"
         android:ems="10"
+        android:hint="@string/enter_your_full_name"
         android:inputType="textPersonName"
-        android:text="full Name" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:startIconDrawable="@drawable/ic_baseline_face_24">
 
-    <TextView
-        android:id="@+id/SEmail"
-        android:layout_gravity="left"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Email"
-        android:textSize="22dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="342dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        />
+    <com.google.android.material.textfield.TextInputLayout
 
-    <EditText
         android:id="@+id/editSEmail"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="37dp"
         android:ems="10"
+        android:hint="Enter Your Email"
         android:inputType="textPersonName"
-        android:text="Email"
-        android:textColor="@android:color/background_dark" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editfullname"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="342dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
         android:id="@+id/Spassword"
-        android:layout_gravity="left"
-        android:layout_width="400dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Password"
-        android:textSize="22dp"
-
-        />
-
-    <EditText
-        android:id="@+id/editSpassword"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="37dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Password"
-        android:textColor="@android:color/black" />
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSEmail"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="342dp"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/chose"
-        android:layout_gravity="left"
-        android:gravity="center"
-        android:layout_width="400dp"
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="choose the Subscription Type"
-        android:textSize="27dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="185dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="@string/choose_the_subscription_type"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Spassword" />
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@+id/radio_button_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18">
+        app:layout_constraintTop_toBottomOf="@+id/Spassword"
 
-        <CheckBox
-            android:id="@+id/Vendor"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/vendorChoice"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Vendor"
-            android:textSize="25dp"
+            android:fontFamily="@font/cairo"
+            android:text="@string/vendor" />
 
-            />
-
-        <CheckBox
-            android:id="@+id/costumer"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/costumerChoice"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="customer"
-            android:textSize="25dp"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
+            android:fontFamily="@font/cairo"
+            android:text="@string/customer"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="496dp" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/SignUpB"
         android:layout_width="100dp"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:text="Sign up" />
-
-
-</LinearLayout>
+        android:layout_gravity="center"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="156dp"
+        android:fontFamily="@font/cairo_bold"
+        android:onClick="saveUser"
+        android:text="Sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
