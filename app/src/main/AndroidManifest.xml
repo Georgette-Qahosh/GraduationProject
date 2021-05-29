@@ -21,7 +21,16 @@
         <activity android:name=".vendorcreatevenue" />
         <activity android:name=".vendormyveneus" />
         <activity android:name=".vendorhomepage" />
-        <activity android:name=".signup" />
+        <activity android:name=".signup">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
         <activity android:name=".signin" />
         <activity android:name=".MainActivity">
             <intent-filter>

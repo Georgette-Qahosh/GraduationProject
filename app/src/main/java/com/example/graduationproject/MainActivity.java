@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, bookingdetails.class));
+
+                startActivity(new Intent(MainActivity.this, signup.class));
             }
             });
             }
