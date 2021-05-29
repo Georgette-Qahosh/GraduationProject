@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,6 +39,8 @@ public class signup extends AppCompatActivity {
     FirebaseAuth fAuth;
     ProgressBar regProgressBar;
     FirebaseFirestore fStore;
+    TextView alreadySignIn;
+
     private static final String Key_FullName = "name";
     private static final String Key_Email = "email";
     private static final String Key_Password = "password";
@@ -58,11 +62,16 @@ public class signup extends AppCompatActivity {
         inputFullName = findViewById(R.id.editfullname);
         vendorChoice = findViewById(R.id.vendorChoice);
         customerChoice = findViewById(R.id.costumerChoice);
+        alreadySignIn = findViewById(R.id.textView23);
 
         fAuth = FirebaseAuth.getInstance();
         regProgressBar = findViewById(R.id.progressBar2);
-
-
+        ///////////////////////
+        /*if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }*/
+        ///////////////////////
         btnSignUp.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
@@ -99,15 +108,15 @@ public class signup extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
                                     Toast.makeText(signup.this, "You've Joined Us Successfully" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                    if(vendorChoice.isChecked()){
+                                    /*if(vendorChoice.isSelected()){
                                         startActivity(new Intent(getApplicationContext(),vendorhomepage.class));
 
                                     }
 
-                                    else if (customerChoice.isChecked()){
+                                    else if (customerChoice.isSelected()){
                                         startActivity(new Intent(getApplicationContext(),cutomerhomepage.class));
 
-                                    }
+                                    }*/
 
                                 }
 
@@ -117,12 +126,19 @@ public class signup extends AppCompatActivity {
                                 else if (!task.isSuccessful()) {
                                     Toast.makeText(signup.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
-                                } /*else {
+                                } else {
                                     startActivity(new Intent(signup.this, MainActivity.class));
                                     finish();
-                                }*/
+                                }
                             }
                         });
+            }
+        });
+
+        alreadySignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),signin.class));
             }
         });
     }
