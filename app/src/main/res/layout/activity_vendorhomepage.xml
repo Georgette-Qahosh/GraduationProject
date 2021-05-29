@@ -181,7 +181,7 @@
                                         android:layout_weight="1"
                                         android:gravity="center"
 
-                                        android:text="Weddings Venue"
+                                        android:text="Caesar Venue"
                                         android:textColor="@android:color/black" />
 
                                     <TextView
