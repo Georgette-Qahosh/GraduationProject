@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firestore.v1.WriteResult;
 
@@ -30,6 +33,8 @@ import java.security.Key;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.content.ContentValues.TAG;
 
 public class signup extends AppCompatActivity {
 
@@ -40,6 +45,9 @@ public class signup extends AppCompatActivity {
     ProgressBar regProgressBar;
     FirebaseFirestore fStore;
     TextView alreadySignIn;
+    RadioGroup choices;
+    String userID;
+
 
     private static final String Key_FullName = "name";
     private static final String Key_Email = "email";
@@ -63,8 +71,10 @@ public class signup extends AppCompatActivity {
         vendorChoice = findViewById(R.id.vendorChoice);
         customerChoice = findViewById(R.id.costumerChoice);
         alreadySignIn = findViewById(R.id.textView23);
+        choices=findViewById(R.id.radioGroup);
 
         fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
         regProgressBar = findViewById(R.id.progressBar2);
         ///////////////////////
         /*if(fAuth.getCurrentUser() != null){
@@ -75,13 +85,14 @@ public class signup extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
-                String email = inputEmail.getEditText().getText().toString().trim();
+                final String email = inputEmail.getEditText().getText().toString().trim();
                 String password = inputPassword.getEditText().getText().toString().trim();
-                String fullName = inputFullName.getEditText().getText().toString().trim();
+                final String fullName = inputFullName.getEditText().getText().toString().trim();
+                RadioButton selectedRadioButton  = findViewById(choices.getCheckedRadioButtonId());
+                final String yourType = selectedRadioButton.getText().toString().trim();
+                System.out.print("first statement. " + yourType);
 
-
-
-                if (TextUtils.isEmpty(email)) {
+               if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -108,16 +119,56 @@ public class signup extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
                                     Toast.makeText(signup.this, "You've Joined Us Successfully" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                    /*if(vendorChoice.isSelected()){
-                                        startActivity(new Intent(getApplicationContext(),vendorhomepage.class));
+                                    userID = fAuth.getCurrentUser().getUid();
 
-                                    }
+                                    //vendor إذا كان المشترك هو
+                                        if ("Vendor".equals(yourType)){
+                                            DocumentReference documentReference = fStore.collection("vendors").document(userID);
+                                            //يحفظ المعلومات لل فاير ستور
+                                            Map<String,Object> user = new HashMap<>();
+                                            user.put("name",fullName);
+                                            user.put("email",email);
+                                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.d(TAG, "onFailure: " + e.toString());
+                                                }
+                                            });
+                                            // بدء واجهة جديدة
 
-                                    else if (customerChoice.isSelected()){
-                                        startActivity(new Intent(getApplicationContext(),cutomerhomepage.class));
+                                            startActivity(new Intent(signup.this, vendorhomepage.class));
 
-                                    }*/
+                                        }
+                                        // إذا كان المشترك هو customer
+                                        else if ("Customer".equals(yourType)){
+                                            DocumentReference documentReference = fStore.collection("customers").document(userID);
+                                            //يحفظ المعلومات لل فاير ستور
+                                            Map<String,Object> user = new HashMap<>();
+                                            user.put("name",fullName);
+                                            user.put("email",email);
+                                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.d(TAG, "onFailure: " + e.toString());
+                                                }
+                                            });
+                                            // بدء واجهة جديدة
+                                            startActivity(new Intent(signup.this, cutomerhomepage.class));
 
+                                        }
+
+
+                                   // startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                 }
 
                                 // If sign in fails, display a message to the user. If sign in succeeds
