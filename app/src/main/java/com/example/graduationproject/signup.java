@@ -76,12 +76,7 @@ public class signup extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         regProgressBar = findViewById(R.id.progressBar2);
-        ///////////////////////
-        /*if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }*/
-        ///////////////////////
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
@@ -110,9 +105,9 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
+
                 regProgressBar.setVisibility(View.VISIBLE);
 
-                //create user
                fAuth.createUserWithEmailAndPassword(email, password )
                         .addOnCompleteListener(signup.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -120,15 +115,13 @@ public class signup extends AppCompatActivity {
                                 if (task.isSuccessful()){
                                     Toast.makeText(signup.this, "You've Joined Us Successfully" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                     userID = fAuth.getCurrentUser().getUid();
-
-                                    //vendor إذا كان المشترك هو
-                                        if ("Vendor".equals(yourType)){
-                                            DocumentReference documentReference = fStore.collection("vendors").document(userID);
+                                    DocumentReference documentReference = fStore.collection("users").document(userID);
                                             //يحفظ المعلومات لل فاير ستور
-                                            Map<String,Object> user = new HashMap<>();
-                                            user.put("name",fullName);
-                                            user.put("email",email);
-                                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    Map<String,Object> user = new HashMap<>();
+                                    user.put("name",fullName);
+                                    user.put("email",email);
+                                    user.put("subscription",yourType);
+                                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
                                                     Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
@@ -139,33 +132,20 @@ public class signup extends AppCompatActivity {
                                                     Log.d(TAG, "onFailure: " + e.toString());
                                                 }
                                             });
-                                            // بدء واجهة جديدة
+                                    // بدء واجهة جديدة بناء على نوع المشترك
+                                    if(yourType.equals("Vendor")){
+                                        startActivity(new Intent(signup.this, vendorhomepage.class));
 
-                                            startActivity(new Intent(signup.this, vendorhomepage.class));
+                                    }
 
-                                        }
-                                        // إذا كان المشترك هو customer
-                                        else if ("Customer".equals(yourType)){
-                                            DocumentReference documentReference = fStore.collection("customers").document(userID);
-                                            //يحفظ المعلومات لل فاير ستور
-                                            Map<String,Object> user = new HashMap<>();
-                                            user.put("name",fullName);
-                                            user.put("email",email);
-                                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
-                                                }
-                                            }).addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Log.d(TAG, "onFailure: " + e.toString());
-                                                }
-                                            });
-                                            // بدء واجهة جديدة
-                                            startActivity(new Intent(signup.this, cutomerhomepage.class));
+                                    else if (yourType.equals("Customer")){
+                                        startActivity(new Intent(signup.this, cutomerhomepage.class));
 
-                                        }
+                                    }
+
+
+
+
 
 
                                    // startActivity(new Intent(getApplicationContext(),MainActivity.class));

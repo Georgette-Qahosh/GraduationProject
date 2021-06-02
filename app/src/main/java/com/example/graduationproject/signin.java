@@ -22,6 +22,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class signin extends AppCompatActivity {
     TextInputLayout loginEmail , loginPassword;
@@ -29,6 +32,9 @@ public class signin extends AppCompatActivity {
     TextView fPass , goToSignUp;
     ProgressBar progressBarForLogin;
     FirebaseAuth fAuth;
+    String userID;
+    FirebaseFirestore fStore;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +77,31 @@ public class signin extends AppCompatActivity {
 
                         if (task.isSuccessful()){
                             Toast.makeText(signin.this, "You've Logged In Successfully" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                            userID=fAuth.getCurrentUser().getUid();
+                            fStore = FirebaseFirestore.getInstance();
+                            final DocumentReference documentReference = fStore.collection("users").document(userID);
+                            documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if (task.isSuccessful()){
+                                        DocumentSnapshot documentSnapshot= task.getResult();
+                                        if(documentSnapshot.exists()){
+                                            String subscriptionType = documentSnapshot.getString("subscription");
+                                            if (subscriptionType.equals("Vendor")){
+                                                startActivity(new Intent(signin.this, vendorhomepage.class));
+
+                                            }
+                                            else if (subscriptionType.equals("Customer")){
+                                                startActivity(new Intent(signin.this, cutomerhomepage.class));
+
+                                            }
+                                        }
+                                    }
+
+                                }
+                            });
+
+
                         }
 
                         else {
