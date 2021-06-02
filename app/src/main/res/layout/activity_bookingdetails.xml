@@ -41,7 +41,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/customerBookingDate"
+        android:id="@+id/editedemail"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/enterPaymentDetails"
+        android:id="@+id/textedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,12 +76,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customerBookingDate" />
+        app:layout_constraintTop_toBottomOf="@+id/editedemail" />
 
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/nameOnCard"
+        android:id="@+id/editedPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterPaymentDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textedit"
         app:startIconDrawable="@drawable/ic_baseline_face_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -118,7 +118,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameOnCard"
+        app:layout_constraintTop_toBottomOf="@+id/editedPassword"
         app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -166,7 +166,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardExpireDate"
-        app:startIconDrawable="@drawable/ic_baseline_credit_card_24">>
+        app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -174,7 +174,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/bookNow"
+        android:id="@+id/editInfoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"

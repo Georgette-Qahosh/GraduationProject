@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="saveUser"
     android:orientation="vertical"
     tools:context=".signup"
     tools:visibility="visible">
@@ -139,12 +138,13 @@
 
     <Button
         android:id="@+id/SignUpB"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="155dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/background_signin_btn"
         android:fontFamily="@font/cairo_bold"
         android:text="Sign up"
         app:layout_constraintEnd_toEndOf="parent"

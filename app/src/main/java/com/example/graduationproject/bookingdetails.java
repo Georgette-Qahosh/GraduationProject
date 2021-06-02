@@ -6,13 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,8 +32,8 @@ public class bookingdetails extends AppCompatActivity {
 
     }
     public void saveBooking (View v) {
-        TextInputLayout BookingDate = (TextInputLayout) findViewById(R.id.customerBookingDate);
-        TextInputLayout NameCard = (TextInputLayout) findViewById(R.id.nameOnCard);
+        TextInputLayout BookingDate = (TextInputLayout) findViewById(R.id.editedemail);
+        TextInputLayout NameCard = (TextInputLayout) findViewById(R.id.editedPassword);
         TextInputLayout NumberOfCard = (TextInputLayout) findViewById(R.id.cardNumber);
         TextInputLayout ExpireDate = (TextInputLayout) findViewById(R.id.cardExpireDate);
         TextInputLayout CVC = (TextInputLayout) findViewById(R.id.cardCVC);

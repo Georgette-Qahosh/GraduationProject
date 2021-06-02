@@ -3,6 +3,7 @@ package com.example.graduationproject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -66,6 +67,7 @@ public class MyProfilePage extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.profile_menu :
                     startActivity(new Intent(MyProfilePage.this, MyProfilePage.class));
+
                     break;
                 case R.id.home_menu :
                     startActivity(new Intent(MyProfilePage.this, cutomerhomepage.class));
@@ -79,6 +81,12 @@ public class MyProfilePage extends AppCompatActivity {
     };
 
 
+    public void goToEditPage (View view){
+        Intent i = new Intent(view.getContext(),EditProfileInfo.class);
+        i.putExtra("email",email.getText().toString());
+        startActivity(i);
+
+    }
     public void logout (View view){
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),signin.class));

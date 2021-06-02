@@ -43,4 +43,5 @@
     <string name="customer_choice">Customer Choice</string>
     <string name="customer">Customer</string>
     <string name="log_out">Log Out</string>
+    <string name="new_password">New Password</string>
 </resources>
