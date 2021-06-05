@@ -38,11 +38,11 @@ public class EditProfileInfo extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         user = fAuth.getCurrentUser();
-        editButton=findViewById(R.id.editInfoButton);
-        editEmail= findViewById(R.id.editedemail);
+        editButton=findViewById(R.id.addVenue);
+        editEmail= findViewById(R.id.venueName);
         // Store email into the text edit box
         editEmail.getEditText().setText(email);
-        editPass=findViewById(R.id.editedPassword);
+        editPass=findViewById(R.id.venueCity);
 
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override

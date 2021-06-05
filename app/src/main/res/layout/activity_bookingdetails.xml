@@ -41,7 +41,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/editedemail"
+        android:id="@+id/venueName"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -76,12 +76,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editedemail" />
+        app:layout_constraintTop_toBottomOf="@+id/venueName" />
 
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/editedPassword"
+        android:id="@+id/venueCity"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/cardNumber"
+        android:id="@+id/venueAddress"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
@@ -118,7 +118,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editedPassword"
+        app:layout_constraintTop_toBottomOf="@+id/venueCity"
         app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -128,7 +128,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/cardExpireDate"
+        android:id="@+id/venuePrice"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -141,7 +141,7 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardNumber"
+        app:layout_constraintTop_toBottomOf="@+id/venueAddress"
         app:startIconDrawable="@drawable/ic_baseline_timelapse_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -165,7 +165,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardExpireDate"
+        app:layout_constraintTop_toBottomOf="@+id/venuePrice"
         app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -174,7 +174,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/editInfoButton"
+        android:id="@+id/addVenue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"

@@ -32,10 +32,10 @@ public class bookingdetails extends AppCompatActivity {
 
     }
     public void saveBooking (View v) {
-        TextInputLayout BookingDate = (TextInputLayout) findViewById(R.id.editedemail);
-        TextInputLayout NameCard = (TextInputLayout) findViewById(R.id.editedPassword);
-        TextInputLayout NumberOfCard = (TextInputLayout) findViewById(R.id.cardNumber);
-        TextInputLayout ExpireDate = (TextInputLayout) findViewById(R.id.cardExpireDate);
+        TextInputLayout BookingDate = (TextInputLayout) findViewById(R.id.venueName);
+        TextInputLayout NameCard = (TextInputLayout) findViewById(R.id.venueCity);
+        TextInputLayout NumberOfCard = (TextInputLayout) findViewById(R.id.venueAddress);
+        TextInputLayout ExpireDate = (TextInputLayout) findViewById(R.id.venuePrice);
         TextInputLayout CVC = (TextInputLayout) findViewById(R.id.cardCVC);
         String bookDate = BookingDate.getEditText().getText().toString().trim();
         String cardName = NameCard.getEditText().getText().toString().trim();
