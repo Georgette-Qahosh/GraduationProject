@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Button button = findViewById(R.id.button);
+        TextView text = findViewById(R.id.textView24);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, signup.class));
             }
             });
+
+        text.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, signin.class));
+            }
+        });
             }
 }
