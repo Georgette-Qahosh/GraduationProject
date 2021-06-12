@@ -26,12 +26,14 @@ public class cutomerhomepage extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.profile_menu :
-                    startActivity(new Intent(cutomerhomepage.this, MyProfilePage.class));
-                    break;
                 case R.id.home_menu :
                     startActivity(new Intent(cutomerhomepage.this, cutomerhomepage.class));
                     break;
+
+                case R.id.profile_menu :
+                    startActivity(new Intent(cutomerhomepage.this, MyProfilePage.class));
+                    break;
+
                 case R.id.chat_menu :
                     startActivity(new Intent(cutomerhomepage.this, customerchat.class));
                     break;

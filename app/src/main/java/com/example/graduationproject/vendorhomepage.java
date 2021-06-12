@@ -56,7 +56,7 @@ public class vendorhomepage extends AppCompatActivity {
                     startActivity(new Intent(vendorhomepage.this, vendorhomepage.class));
                     break;
                 case R.id.chat_menu :
-                    startActivity(new Intent(vendorhomepage.this, customerchat.class));
+                    startActivity(new Intent(vendorhomepage.this, vendorchat.class));
                     break;
             }
             return false;

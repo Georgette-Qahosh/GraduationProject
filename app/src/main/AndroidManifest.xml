@@ -18,7 +18,7 @@
         <activity android:name=".bookingdetails" />
         <activity android:name=".customervendorpage" />
         <activity android:name=".customersearchresult" />
-        <activity android:name=".cutomerhomepage" />
+        <activity android:name=".cutomerhomepage"/>
         <activity android:name=".vendorchat" />
         <activity android:name=".vendorcreatevenue" />
         <activity android:name=".vendormyveneus" />
