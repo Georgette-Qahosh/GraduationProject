@@ -282,7 +282,7 @@
                                         android:layout_gravity="center_vertical|end"
                                         android:gravity="end"
 
-                                        android:text="hatem Barakat"
+                                        android:text="Maraah Barakat"
                                         android:textColor="@android:color/black" />
                                 </LinearLayout>
 
