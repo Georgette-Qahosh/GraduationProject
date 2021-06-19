@@ -1,127 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".customersearchresult">
+    android:background="@color/WHITE">
 
-    <TextView
-        android:id="@+id/rearchResult"
-        android:layout_width="250dp"
+    <RelativeLayout
+        android:id="@+id/ToolBar3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="search results"
-        android:textSize="35dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:elevation="10dp">
 
-    <ImageView
-        android:id="@+id/vendor1"
-        android:layout_width="113dp"
-        android:layout_height="123dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="139dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:minHeight="?attr/actionBarSize"
+            android:paddingTop="5dp"
+            android:theme="?attr/actionBarTheme" />
 
-    <ImageView
-        android:id="@+id/vendor2"
-        android:layout_width="113dp"
-        android:layout_height="126dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="284dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/myCNAME2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:text="Customer Name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
 
-    <ImageView
-        android:id="@+id/vendor3"
-        android:layout_width="107dp"
-        android:layout_height="132dp"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="428dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/MenuBar"-->
+        <!--            app:srcCompat="@drawable/backarrow"-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_alignParentStart="false"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:layout_alignParentEnd="false"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:layout_marginLeft="5dp"-->
+        <!--            android:tint="@color/WHITE"-->
+        <!--            android:visibility="visible" />-->
 
-    <ImageView
-        android:id="@+id/vendor4"
-        android:layout_width="112dp"
-        android:layout_height="124dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="582dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
 
-    <RatingBar
-        android:id="@+id/ratingBar3"
-        android:layout_width="wrap_content"
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ToolBar3"
+        android:background="@drawable/gray_border" />
+
+    <LinearLayout
+        android:id="@+id/IOP"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="205dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_below="@id/view"
+        android:orientation="vertical">
 
-    <RatingBar
-        android:id="@+id/ratingBar4"
-        android:layout_width="wrap_content"
+        <SearchView
+            android:id="@+id/searchViewVenues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:queryHint="Search Here"
+            android:iconifiedByDefault="false"
+            android:layout_alignParentTop="true"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="604dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="354dp"
-        tools:ignore="MissingConstraints" />
 
-    <RatingBar
-        android:id="@+id/ratingBar5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="504dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <RatingBar
-        android:id="@+id/ratingBar6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="648dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/VendorName1"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Vendor 1"
-        android:textSize="25dp"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="158dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/VendorName2"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Vendor 2"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="310dp" />
-
-    <TextView
-        android:id="@+id/VendorName3"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Vendor 3"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="451dp" />
-
-    <TextView
-        android:id="@+id/VendorName4"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:text="Vendor 4"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="599dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="675dp"
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
+</RelativeLayout>

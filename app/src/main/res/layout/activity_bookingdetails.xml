@@ -41,7 +41,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venueName"
+        android:id="@+id/datePicker"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -59,6 +59,7 @@
         app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/datePicker1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -76,12 +77,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venueName" />
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venueCity"
+        android:id="@+id/cName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -104,7 +105,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venueAddress"
+        android:id="@+id/cNum"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
@@ -118,7 +119,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venueCity"
+        app:layout_constraintTop_toBottomOf="@+id/cName"
         app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -128,7 +129,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venuePrice"
+        android:id="@+id/cXDate"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -141,7 +142,7 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venueAddress"
+        app:layout_constraintTop_toBottomOf="@+id/cNum"
         app:startIconDrawable="@drawable/ic_baseline_timelapse_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -151,7 +152,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/cardCVC"
+        android:id="@+id/cvc"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="180dp"
@@ -165,7 +166,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venuePrice"
+        app:layout_constraintTop_toBottomOf="@+id/cXDate"
         app:startIconDrawable="@drawable/ic_baseline_credit_card_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -174,17 +175,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/addVenue"
+        android:id="@+id/bookNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="102dp"
-        android:onClick="saveBooking"
         android:text="@string/book_now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardCVC" />
+        app:layout_constraintTop_toBottomOf="@+id/cvc" />
 </androidx.constraintlayout.widget.ConstraintLayout>

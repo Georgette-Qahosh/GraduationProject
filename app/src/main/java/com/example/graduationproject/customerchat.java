@@ -23,7 +23,7 @@ public class customerchat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customerchat);
 
-        searchView = (SearchView) findViewById(R.id.searchView);
+        searchView = (SearchView) findViewById(R.id.searchViewVenues);
         listView = (ListView) findViewById(R.id.lv1);
 
         list = new ArrayList<>();

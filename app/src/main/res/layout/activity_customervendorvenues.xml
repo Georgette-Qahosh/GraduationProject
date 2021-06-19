@@ -6,7 +6,7 @@
     android:background="@color/WHITE">
 
     <RelativeLayout
-        android:id="@+id/ToolBar2"
+        android:id="@+id/ToolBar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp">
@@ -21,7 +21,7 @@
             android:theme="?attr/actionBarTheme" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/myCNAME2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -39,7 +39,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/ToolBar2"
+        android:layout_below="@id/ToolBar3"
         android:background="@drawable/gray_border" />
 
     <LinearLayout
@@ -90,7 +90,7 @@
                 android:background="@color/WHITE">
 
                 <ImageView
-                    android:id="@+id/imageView131"
+                    android:id="@+id/venueImageInList"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
 
@@ -153,7 +153,7 @@
                             android:text="/Night" />
 
                         <TextView
-                            android:id="@+id/textView71"
+                            android:id="@+id/venueNameInMyVenue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
@@ -164,7 +164,7 @@
                             android:textColor="@android:color/black" />
 
                         <TextView
-                            android:id="@+id/textView81"
+                            android:id="@+id/availableity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -257,7 +257,7 @@
 
 
                         <TextView
-                            android:id="@+id/textView101"
+                            android:id="@+id/vendorName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical|end"

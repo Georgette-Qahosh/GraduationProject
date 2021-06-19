@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +23,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class vendorhomepage extends AppCompatActivity {
+public class viewMyVenues extends AppCompatActivity {
+
     RecyclerView recyclerView;
     ArrayList<Venue> venueArrayList;
     MyAdapter myAdapter;
@@ -32,13 +32,11 @@ public class vendorhomepage extends AppCompatActivity {
     FirebaseAuth fAuth;
     String userID;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vendorhomepage);
-
-        Button button = (Button) findViewById(R.id.button);
-        ImageView imageView1= (ImageView) findViewById(R.id.venueImageInList);
+        setContentView(R.layout.activity_view_my_venues);
         recyclerView = findViewById(R.id.vendorVenuesList);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -46,45 +44,13 @@ public class vendorhomepage extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         venueArrayList = new ArrayList<Venue>();
-        myAdapter = new MyAdapter(vendorhomepage.this,venueArrayList);
+        myAdapter = new MyAdapter(viewMyVenues.this,venueArrayList);
         recyclerView.setAdapter(myAdapter);
         userID = fAuth.getCurrentUser().getUid();
         EventChangeListener();
 
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent1 = new
-                        Intent(vendorhomepage.this,vendorcreatevenue.class);
-                vendorhomepage.this.startActivity(intent1);
-                finish();
-
-            }
-
-        });
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation3);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
     }
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.profile_menu :
-                    startActivity(new Intent(vendorhomepage.this, MyProfilePage.class));
-                    break;
-                case R.id.home_menu :
-                    startActivity(new Intent(vendorhomepage.this, vendorhomepage.class));
-                    break;
-                case R.id.chat_menu :
-                    startActivity(new Intent(vendorhomepage.this, viewMyVenues.class));
-                    break;
-            }
-            return false;
-        }
-    };
-
 
     private void EventChangeListener() {
         db.collection("users").document(userID).collection("venues").addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -110,5 +76,7 @@ public class vendorhomepage extends AppCompatActivity {
         });
     }
 
-}
 
+
+
+}

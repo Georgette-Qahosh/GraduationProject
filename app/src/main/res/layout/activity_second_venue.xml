@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/ToolBar2"
+        android:id="@+id/ToolBar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/WHITE"
@@ -21,7 +21,7 @@
             android:theme="?attr/actionBarTheme" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/myCNAME2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -49,7 +49,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ToolBar2"
+        android:layout_below="@id/ToolBar3"
         android:fillViewport="true">
 
         <LinearLayout
@@ -104,7 +104,7 @@
                             android:textColor="@color/WHITE" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/textpriiice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
@@ -140,7 +140,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/clickhereToviewMap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -148,7 +148,7 @@
                 android:text="Address on google maps" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/allll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"

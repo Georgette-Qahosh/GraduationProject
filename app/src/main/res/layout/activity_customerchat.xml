@@ -11,10 +11,10 @@
         android:id="@+id/lv1"
         android:divider="#DDA0DD"
         android:dividerHeight="2dp"
-        android:layout_below="@+id/searchView"/>
+        android:layout_below="@+id/searchViewVenues"/>
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/searchViewVenues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:queryHint="Search Here"

@@ -15,7 +15,7 @@
         app:srcCompat="@drawable/logov" />
 
     <RelativeLayout
-        android:id="@+id/ToolBar2"
+        android:id="@+id/ToolBar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp">
@@ -30,7 +30,7 @@
             android:theme="?attr/actionBarTheme" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/myCNAME2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -59,7 +59,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/ToolBar2"
+        android:layout_below="@id/ToolBar3"
         android:background="@drawable/gray_border" />
 
     <LinearLayout

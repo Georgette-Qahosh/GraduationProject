@@ -6,14 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -28,6 +30,7 @@ public class vendorcreatevenue extends AppCompatActivity {
     FirebaseFirestore fStore;
     Button addVenue;
     String userID;
+    AutoCompleteTextView autoCompleteTextView;
 
 
     @Override
@@ -38,15 +41,20 @@ public class vendorcreatevenue extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        addVenue=findViewById(R.id.addVenue);
-        name = findViewById(R.id.venueName);
-        city = findViewById(R.id.venueCity);
-        location = findViewById(R.id.venueAddress);
-        price = findViewById(R.id.venuePrice);
+        addVenue=findViewById(R.id.bookNow);
+        name = findViewById(R.id.datePicker);
+        city = findViewById(R.id.cName);
+        location = findViewById(R.id.cNum);
+        price = findViewById(R.id.cXDate);
         userID=fAuth.getCurrentUser().getUid();
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        String [] cities ={"Ramallah","Nablus","Hebron","Jenin","Jericho","Gaza" ,"Qalqilyah","Tulkarm","Khan Yunis","Tubas"};
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this,R.layout.cities,cities);
+        autoCompleteTextView.setText(arrayAdapter.getItem(0).toString(),false);
+        autoCompleteTextView.setAdapter(arrayAdapter);
 
 
-        addVenue.setOnClickListener(new View.OnClickListener() {
+      /*  addVenue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(name.getEditText().getText().toString().isEmpty() && city.getEditText().getText().toString().isEmpty() &&
@@ -80,6 +88,6 @@ public class vendorcreatevenue extends AppCompatActivity {
             }
         });
         // Store email into the text edit box
-
+*/
     }
 }

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyProfilePage"></activity>
+        <activity android:name=".SignUpOptions"></activity>
+        <activity android:name=".VerifyNumber" />
+        <activity android:name=".opt" />
+        <activity android:name=".viewMyVenues" />
+        <activity android:name=".MyProfilePage" />
         <activity android:name=".customerchat" />
         <activity android:name=".SingleVenue" />
         <activity android:name=".SecondVenue" />
@@ -22,8 +26,8 @@
         <activity android:name=".vendorchat" />
         <activity android:name=".vendorcreatevenue" />
         <activity android:name=".vendormyveneus" />
-        <activity android:name=".vendorhomepage"/>
-        <activity android:name=".signup"/>
+        <activity android:name=".vendorhomepage" />
+        <activity android:name=".signup" />
         <activity android:name=".signin" />
         <activity android:name=".MainActivity">
             <intent-filter>

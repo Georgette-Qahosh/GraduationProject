@@ -14,7 +14,7 @@ public class SecondVenue extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_venue);
-        TextView maptext = (TextView) findViewById(R.id.textView15);
+        TextView maptext = (TextView) findViewById(R.id.clickhereToviewMap);
         maptext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

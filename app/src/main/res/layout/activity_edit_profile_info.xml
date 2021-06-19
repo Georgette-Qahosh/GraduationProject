@@ -27,7 +27,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venueName"
+        android:id="@+id/datePicker"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/venueCity"
+        android:id="@+id/cName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/venueName"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
         app:startIconDrawable="@drawable/ic_baseline_edit_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -75,13 +75,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/addVenue"
+        android:id="@+id/bookNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="102dp"
-        android:onClick="saveBooking"
         android:text="Edit Info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
