@@ -3,6 +3,7 @@ package com.example.graduationproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,11 @@ public class bookingdetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookingdetails);
+        Intent data = getIntent();
+        String venueId = data.getStringExtra("id");
+        String isBooked = data.getStringExtra("isBooked");
+        String path = data.getStringExtra("venuePath");
+
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         picker = findViewById(R.id.datePicker1);
@@ -96,12 +102,11 @@ public class bookingdetails extends AppCompatActivity {
                     user.put("date",n);
                     user.put("expireDate",cX);
                     user.put("nameCard",c);
+                    user.put("venueBooked",venueId);
                     fStore.collection("users").document(userID).collection("bookings").document().set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Log.d(TAG, "isBooked "+ userID);
-
-
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -109,6 +114,10 @@ public class bookingdetails extends AppCompatActivity {
                             Log.d(TAG, "onFailure: " + e.toString());
                         }
                     });
+
+                    fStore.document(path).update("isBooked",true);
+
+
                 }
             });
 

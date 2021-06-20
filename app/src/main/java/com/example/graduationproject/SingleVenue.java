@@ -24,7 +24,7 @@ public class SingleVenue extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     String venueID;
-    Button button1;
+    Button button1 , itIsBooked;
 
 
 
@@ -33,6 +33,7 @@ public class SingleVenue extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_venue);
         button1 = findViewById(R.id.bookNow);
+        itIsBooked = findViewById(R.id.itIsBooked);
         price = findViewById(R.id.textpriiice);
         textVendor = findViewById(R.id.allll);
         venueName = findViewById(R.id.venueeeName);
@@ -45,11 +46,24 @@ public class SingleVenue extends AppCompatActivity {
         String venueLocation = data.getStringExtra("location");
         String id = data.getStringExtra("id");
         String venueDoc = data.getStringExtra("venueDoc");
+        Boolean isBooked = data.getExtras().getBoolean("isBooked");
         System.out.println("vendorName" + vendorName);
         System.out.println("venueName" + venueName);
         System.out.println("venuePrice" + venuePrice);
         System.out.println("venueLocation" + venueLocation);
         System.out.println("id" + id);
+
+        if (isBooked==true){
+
+            button1.setVisibility(View.GONE);
+            itIsBooked.setVisibility(View.VISIBLE);
+
+        } else if (isBooked==false){
+            button1.setVisibility(View.VISIBLE);
+            itIsBooked.setVisibility(View.GONE);
+        }
+
+
 
         DocumentReference documentReference = fStore.document(venueDoc);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
@@ -72,6 +86,9 @@ public class SingleVenue extends AppCompatActivity {
 
                 Intent i = new Intent(SingleVenue.this,bookingdetails.class);
                 i.putExtra("path",venueDoc);
+                i.putExtra("id",id);
+                i.putExtra("venuePath",venueDoc);
+                i.putExtra("isBooked",isBooked);
                 startActivity(i);
 
             }

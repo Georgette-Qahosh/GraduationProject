@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -46,174 +47,154 @@
 
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/ToolBar2"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="126dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/venue1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-
-            <ImageView
-                android:id="@+id/imageView"
+            <RelativeLayout
+                android:id="@+id/Rentbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/venue1" />
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Rent"
+                    android:textColor="@color/WHITE"
+                    android:textSize="10sp" />
 
-                <RelativeLayout
-                    android:id="@+id/Rentbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimary">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="10dp"
-                        android:text="Rent"
-                        android:textColor="@color/WHITE"
-                        android:textSize="10sp" />
+                        android:layout_marginStart="5dp"
 
-                    <LinearLayout
+                        android:textColor="@color/WHITE" />
+
+                    <TextView
+                        android:id="@+id/textpriiice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/price"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
+                        android:text="2000$/Night"
+                        android:textColor="@color/WHITE" />
 
-                            android:textColor="@color/WHITE" />
+                </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/textpriiice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+            </RelativeLayout>
 
-                            android:text="2000$/Night"
-                            android:textColor="@color/WHITE" />
+        </LinearLayout>
 
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="ID#"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="5"
-                    android:textSize="10sp" />
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clickhereToviewMap"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Click here to see address on google map" />
+                android:layout_weight="1"
+                android:text="ID#"
+                android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/allll"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:text="Ramallah,Almasyoon,4th ST"
-                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:text="5"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clickhereToviewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Click here to see address on google map" />
+
+        <TextView
+            android:id="@+id/allll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Ramallah,Almasyoon,4th ST"
+            android:textColor="@android:color/black"
 
 
-                />
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/bookNow"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="115dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginEnd="112dp"
-                android:layout_marginTop="80dp"
                 android:layout_marginBottom="102dp"
                 android:text="Book"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
-
-            <TextView
-                android:id="@+id/textView59"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/itIsBooked"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Payment System" />
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/buuton_book"
+                android:text="The Venue is Booked!"
+                android:textColorLink="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.495" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView60"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:text="Effortlessly collect online payments via credit cards, debit cards and ACH for your venue, catering or event planning invoices as well as event registrations. By using one of our integrated merchant account processors - which include PaySimple, Stripe and Square - you can receive payouts into your bank account in as little as 1-2 business days. Be able to accept all major credit cards, including Visa, MasterCard, American Express and Discover."
-                android:textColor="@android:color/black" />
-
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Description" />
-
-            <TextView
-                android:id="@+id/textView62"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:text="Are you interested in arranging official marriage easily, fast and without additional expenses? Awesome!  We will help you to receive the marriage certificate for 1 hour in the Wedding hall of Tbilisi!"
-                android:textColor="@android:color/black" />
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 
 
 </RelativeLayout>

@@ -36,10 +36,10 @@ public class featuredAdapter extends RecyclerView.Adapter<featuredAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull featuredAdapter.MyViewHolder holder, int position) {
         FeaturedVenue featuredVenue = featuredVenueArrayList.get(position);
+
         holder.name.setText(featuredVenue.name);
         holder.location.setText(featuredVenue.city);
         holder.vendorName.setText(featuredVenue.vendorName);
-
         holder.price.setText(String.valueOf(featuredVenue.price));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +50,7 @@ public class featuredAdapter extends RecyclerView.Adapter<featuredAdapter.MyView
                 intent.putExtra("price",featuredVenue.price);
                 intent.putExtra("location",featuredVenue.city);
                 intent.putExtra("id",featuredVenue.getIdV());
+                intent.putExtra("isBooked",featuredVenue.getBooked());
                 intent.putExtra("venueDoc", featuredVenue.venueDoc.getPath());
                 context.startActivity(intent);
             }
